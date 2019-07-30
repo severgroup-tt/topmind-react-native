@@ -3,7 +3,9 @@
 
 ## Getting started
 
-`npm install react-native-topmind --save` or `yarn add react-native-topmind`
+Add to package.json
+
+`"react-native-topmind": "https://github.com/severgroup-tt/topmind-react-native.git#master"`
 
 Add maven repo in build.gradle
 ```groovy
