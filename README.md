@@ -23,29 +23,29 @@ import { RNTopmind } from 'react-native-topmind';
   /**
    * Required to call before any other calls (!!!)
    */
-  RNTopmind.init(): void
+  RNTopmind.init();
 
   /**
    * Use it to send event to TopMind.
    * @param name event's name: "menu click" f.e
    * @param eventData Map with data {myParam: "myValue"} f.e
    */
-  RNTopmind.logEvent(name: string, eventData: {[key: string]: string} ): void;
+  RNTopmind.logEvent(name: string, eventData: {[key: string]: string} );
 
   /**
    * Use it to persist user identifier
-   * It will be passed through all events as userId value
+   * It will be passed through all events as userId property
    * @param userId your user id
    */
-  RNTopmind.setUserId(userId: string): void;
+  RNTopmind.setUserId(userId: string);
 
   /**
    * It removes all persisted TopMind data (userId f.e)
    */
-  RNTopmind.logout(): void;
+  RNTopmind.logout();
 
   /**
    * Sends event that app has started
    */
-  RNTopmind.applicationStarted(): void;
+  RNTopmind.applicationStarted();
 ```
