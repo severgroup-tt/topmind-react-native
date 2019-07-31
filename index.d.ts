@@ -1,7 +1,7 @@
 declare module 'react-native-topmind';
 
 export class RNTopmind {
-  static init(): void;
+  static initialize(): void;
   /**
    * Use it to send event to TopMind.
    * @param name event's name: "menu click" f.e
