@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.author       = { 'Kirill Gudkov' => 'for.example.nickname@gmail.com' }
   s.ios.deployment_target = '9.0'
-  s.source       = { :git => 'https://github.com/severgroup-tt/topmind-react-native.git' }
-  s.source_files = './ios/*.{h,m}'
+  s.source       = { :git => 'https://github.com/severgroup-tt/topmind-react-native.git', :tag => 'master' }
+  s.source_files = 'ios/**/*.{h,m}'
 
   s.dependency 'TopMindSDK'
   s.dependency 'React'
