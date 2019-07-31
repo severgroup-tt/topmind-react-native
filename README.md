@@ -20,6 +20,30 @@ And run `react-native link react-native-topmind`
 
 then run `cd ios && pod install`
 
+Add
+```
+<key>TopMindClientId</key>
+<string>your_client_id</string>
+<key>TopMindApiKey</key>
+<string>your_api_key</string>
+```
+to `info.plist`
+
+And add
+```
+<string name="TopmindClientId">your_client_id</string>
+<string name="TopmindApiKey">your_api_key</string>
+```
+to `res/values/strings.xml`
+
+and
+```
+<meta-data android:name="TopmindApiKey" android:value="@string/TopmindApiKey" />
+<meta-data android:name="TopmindClientId" android:value="@string/TopmindClientId" />
+```
+
+to your `AndroidManifest.xml`
+
 ## Usage
 ```typescript
 import { RNTopmind } from 'react-native-topmind';
