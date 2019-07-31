@@ -9,7 +9,6 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   React Native SDK for Topmind
                    DESC
-  s.homepage     = ""
   s.license      = package["license"]
   s.author       = { "Kirill Gudkov" => "for.example.nickname@gmail.com" }
   s.ios.deployment_target = '9.0'
