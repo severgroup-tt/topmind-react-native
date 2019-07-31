@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Kirill Gudkov' => 'for.example.nickname@gmail.com' }
   s.ios.deployment_target = '9.0'
   s.source       = { :git => 'https://github.com/severgroup-tt/topmind-react-native.git' }
-  s.source_files = 'ios/RNTopmind/**/*.{h,m}'
+  s.source_files = './ios/RNTopmind/**/*.{h,m}'
 
   s.dependency 'TopMindSDK'
   s.dependency 'React'
