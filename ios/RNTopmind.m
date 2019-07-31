@@ -17,7 +17,21 @@ RCT_EXPORT_METHOD(initialize) {
 }
 
 RCT_EXPORT_METHOD(logEvent: (NSString *) name params:(NSDictionary *) params) {
+    if(topmind != nil) {
+        [topmind logEvent:name withEventProperties:params];
+    }
+}
 
+RCT_EXPORT_METHOD(logout) {
+    if(topmind != nil) [topmind logout];
+}
+
+RCT_EXPORT_METHOD(setUserId: (NSString *) userId) {
+    if(topmind != nil) [topmind setUserId:userId];
+}
+
+RCT_EXPORT_METHOD(applicationStarted) {
+    if(topmind != nil) [topmind applicationStarted];
 }
 
 @end
