@@ -15,10 +15,7 @@ Pod::Spec.new do |s|
   s.source_files  = "RNTopmind/**/*.{h,m}"
   s.requires_arc = true
 
-
-  s.dependency 'TopMindSDK', :git => 'https://github.com/severgroup-tt/topmind-ios-framework', :branch => 'master'
+  s.dependency "TopMindSDK"
   s.dependency "React"
-  #s.dependency "others"
-
 end
 
