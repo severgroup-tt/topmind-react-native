@@ -16,9 +16,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
 
+  s.dependency 'TopMindSDK', :git => 'https://github.com/severgroup-tt/topmind-ios-framework', :branch => 'master'
   s.dependency "React"
   #s.dependency "others"
 
 end
 
-  
