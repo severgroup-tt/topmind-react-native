@@ -18,6 +18,8 @@ allprojects {
 
 And run `react-native link react-native-topmind`
 
+then run `cd ios && pod install`
+
 ## Usage
 ```typescript
 import { RNTopmind } from 'react-native-topmind';
