@@ -10,8 +10,8 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "author": "Kirill Gudkov (for.example.nickname@gmail.com)",
+  "license": "ISC",
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"

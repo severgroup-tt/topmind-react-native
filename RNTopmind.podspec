@@ -5,8 +5,9 @@ Pod::Spec.new do |s|
   s.name         = "react-native-topmind"
   s.version      = package["version"]
   s.summary      = package["description"]
+  s.homepage     = "https://github.com/severgroup-tt/topmind-react-native"
   s.description  = <<-DESC
-                  RNTopmind
+                  React Native SDK for Topmind
                    DESC
   s.homepage     = ""
   s.license      = package["license"]
