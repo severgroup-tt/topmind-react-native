@@ -7,6 +7,11 @@ Add to package.json
 
 `"react-native-topmind": "https://github.com/severgroup-tt/topmind-react-native.git#master"`
 
+and run `yarn` or `npm install`
+
+Then run `react-native link react-native-topmind`
+
+### Android setup
 Add maven repo in build.gradle
 ```groovy
 allprojects {
@@ -16,9 +21,20 @@ allprojects {
 }
 ```
 
-And run `react-native link react-native-topmind`
+Add
+```
+<string name="TopmindClientId">your_client_id</string>
+<string name="TopmindApiKey">your_api_key</string>
+```
+to `res/values/strings.xml` and
+```
+<meta-data android:name="TopmindApiKey" android:value="@string/TopmindApiKey" />
+<meta-data android:name="TopmindClientId" android:value="@string/TopmindClientId" />
+```
 
-then run `cd ios && pod install`
+to your `AndroidManifest.xml`
+
+### iOS setup
 
 Add
 ```
@@ -29,20 +45,7 @@ Add
 ```
 to `info.plist`
 
-And add
-```
-<string name="TopmindClientId">your_client_id</string>
-<string name="TopmindApiKey">your_api_key</string>
-```
-to `res/values/strings.xml`
-
-and
-```
-<meta-data android:name="TopmindApiKey" android:value="@string/TopmindApiKey" />
-<meta-data android:name="TopmindClientId" android:value="@string/TopmindClientId" />
-```
-
-to your `AndroidManifest.xml`
+and run `cd ios && pod install`
 
 ## Usage
 ```typescript
