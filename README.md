@@ -55,9 +55,14 @@ import { RNTopmind } from 'react-native-topmind-sdk';
   /**
    * Use it to send event to TopMind.
    * @param name event's name: "menu click" e.g
-   * @param eventData Map with data {myParam: "myValue"} e.g
+   * @param eventData Map with data {foo: "bar"} e.g
+   * or {
+   *      foo: { 
+   *        bar: "someString" 
+   *      }
+   *    }
    */
-  RNTopmind.logEvent(name: string, eventData: {[key: string]: string} );
+  RNTopmind.logEvent(name: string, eventData: {[key: string]: string | object } );
 
   /**
    * Use it to persist user identifier
