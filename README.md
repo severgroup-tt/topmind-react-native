@@ -3,7 +3,7 @@
 
 ## Getting started
 
-Run `yarn add topmind-react-native` or `npm install topmind-react-native --save`
+Run `yarn add react-native-topmind` or `npm install react-native-topmind --save`
 
 Then run `react-native link react-native-topmind`
 
