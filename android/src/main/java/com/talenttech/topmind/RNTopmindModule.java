@@ -30,7 +30,7 @@ public class RNTopmindModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void init() {
+    public void initialize() {
         try {
             if (getCurrentActivity() != null) {
                 topmind = new TopMind(getCurrentActivity());
