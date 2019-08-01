@@ -7,14 +7,14 @@ export class RNTopmind {
   /**
    * Use it to send event to TopMind.
    * @param name event's name: "menu click" e.g
-   * @param eventData Map with data { foo: "bar" } e.g
-   * or {
-   *      foo: {
-   *        bar: "someString"
-   *      }
+   * @param eventData Map with data
+   * {
+   *   foo: {
+   *      bar: "someString"
    *    }
+   * }
    */
-  static logEvent(name: string, eventData: {[key: string]: string | object} ): void;
+  static logEvent(name: string, eventData: {[key: string]: object} ): void;
 
   /**
    * Use it to persist user identifier
