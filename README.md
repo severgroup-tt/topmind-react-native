@@ -1,6 +1,8 @@
 
 # react-native-topmind-sdk
 
+[![npm version](https://badge.fury.io/js/react-native-topmind-sdk.svg)](https://badge.fury.io/js/react-native-topmind-sdk)
+
 ## Getting started
 
 Run `yarn add react-native-topmind-sdk` or `npm install react-native-topmind-sdk --save`
