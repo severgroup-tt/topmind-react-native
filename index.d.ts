@@ -4,8 +4,8 @@ export class RNTopmind {
   static initialize(): void;
   /**
    * Use it to send event to TopMind.
-   * @param name event's name: "menu click" f.e
-   * @param eventData Map with data {myParam: "myValue"} f.e
+   * @param name event's name: "menu click" e.g
+   * @param eventData Map with data {myParam: "myValue"} e.g
    */
   static logEvent(name: string, eventData: {[key: string]: string} ): void;
 
@@ -17,7 +17,7 @@ export class RNTopmind {
   static setUserId(userId: string): void;
 
   /**
-   * It removes all persisted TopMind data (userId f.e)
+   * It removes all persisted TopMind data (userId e.g)
    */
   static logout(): void;
 

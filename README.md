@@ -50,12 +50,12 @@ import { RNTopmind } from 'react-native-topmind-sdk';
   /**
    * Required to call before any other calls (!!!)
    */
-  RNTopmind.init();
+  RNTopmind.initialize();
 
   /**
    * Use it to send event to TopMind.
-   * @param name event's name: "menu click" f.e
-   * @param eventData Map with data {myParam: "myValue"} f.e
+   * @param name event's name: "menu click" e.g
+   * @param eventData Map with data {myParam: "myValue"} e.g
    */
   RNTopmind.logEvent(name: string, eventData: {[key: string]: string} );
 
@@ -67,7 +67,7 @@ import { RNTopmind } from 'react-native-topmind-sdk';
   RNTopmind.setUserId(userId: string);
 
   /**
-   * It removes all persisted TopMind data (userId f.e)
+   * It removes all persisted TopMind data (userId e.g)
    */
   RNTopmind.logout();
 
