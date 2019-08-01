@@ -3,11 +3,7 @@
 
 ## Getting started
 
-Add to package.json
-
-`"react-native-topmind": "https://github.com/severgroup-tt/topmind-react-native.git#master"`
-
-and run `yarn` or `npm install`
+Run `yarn add topmind-react-native` or `npm install topmind-react-native --save`
 
 Then run `react-native link react-native-topmind`
 
