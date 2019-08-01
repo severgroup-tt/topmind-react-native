@@ -3,9 +3,9 @@
 
 ## Getting started
 
-Run `yarn add react-native-topmind` or `npm install react-native-topmind --save`
+Run `yarn add react-native-topmind-sdk` or `npm install react-native-topmind-sdk --save`
 
-Then run `react-native link react-native-topmind`
+Then run `react-native link react-native-topmind-sdk`
 
 ### Android setup
 Add maven repo in build.gradle
