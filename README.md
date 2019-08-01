@@ -1,5 +1,5 @@
 
-# react-native-topmind
+# react-native-topmind-sdk
 
 ## Getting started
 
@@ -45,7 +45,7 @@ and run `cd ios && pod install`
 
 ## Usage
 ```typescript
-import { RNTopmind } from 'react-native-topmind';
+import { RNTopmind } from 'react-native-topmind-sdk';
 
   /**
    * Required to call before any other calls (!!!)
