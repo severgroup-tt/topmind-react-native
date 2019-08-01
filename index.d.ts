@@ -1,4 +1,4 @@
-declare module 'react-native-topmind';
+declare module 'react-native-topmind-sdk';
 
 export class RNTopmind {
   static initialize(): void;
