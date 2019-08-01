@@ -7,7 +7,7 @@ export class RNTopmind {
   /**
    * Use it to send event to TopMind.
    * @param name event's name: "menu click" e.g
-   * @param eventData Map with data {foo: "bar"} e.g
+   * @param eventData Map with data { foo: "bar" } e.g
    * or {
    *      foo: {
    *        bar: "someString"
