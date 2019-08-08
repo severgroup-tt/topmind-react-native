@@ -71,15 +71,25 @@ import { RNTopmind } from 'react-native-topmind-sdk';
    * It will be passed through all events as userId property
    * @param userId your user id
    */
-  RNTopmind.setUserId(userId: string);
+  RNTopmind.setUserId(userId: string): void;
 
   /**
    * It removes all persisted TopMind data (userId e.g)
    */
-  RNTopmind.logout();
+  RNTopmind.logout(): void;
 
   /**
    * Sends event that app has started
    */
-  RNTopmind.applicationStarted();
+  RNTopmind.applicationStarted(): void;
+
+  /**
+   * Returns the current install id
+   */
+  RNTopmind.getInstallId(): Promise<String>;
+
+  /**
+   * Returns true if the application was launched for the first time
+   */
+  RNTopmind.isFirstRun(): Promise<boolean>;
 ```
