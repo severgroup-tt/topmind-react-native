@@ -1,6 +1,7 @@
 
 package com.talenttech.topmind;
 
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -64,6 +65,24 @@ public class RNTopmindModule extends ReactContextBaseJavaModule {
     public void applicationStarted() {
         if (topmind != null) {
             runOnUiThread(() -> topmind.applicationStarted());
+        }
+    }
+
+    @ReactMethod
+    public void getInstallId(Promise promise) {
+        if (topmind != null) {
+            runOnUiThread(() -> promise.resolve(topmind.getInstallId()));
+        } else {
+            promise.reject("error", "TopMind instance is null");
+        }
+    }
+
+    @ReactMethod
+    public void isFirstRun(Promise promise) {
+        if (topmind != null) {
+            runOnUiThread(() -> promise.resolve(topmind.isFirstRun()));
+        } else {
+            promise.reject("error", "TopMind instance is null");
         }
     }
 }

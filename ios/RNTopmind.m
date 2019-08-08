@@ -1,9 +1,9 @@
 
 #import "RNTopmind.h"
-#import <topmind_sdk/topmind_sdk.h>
+#import "topmind_sdk.h"
 
 @implementation RNTopmind {
-    TopMind *topmind;
+    TopMindSDK *topmind;
 }
 
 RCT_EXPORT_MODULE()
@@ -13,7 +13,7 @@ RCT_EXPORT_MODULE()
 }
 
 RCT_EXPORT_METHOD(initialize) {
-    topmind = [[TopMind alloc] init];
+    topmind = [[TopMindSDK alloc] init];
 }
 
 RCT_EXPORT_METHOD(logEvent: (NSString *) name params:(NSDictionary *) params) {
@@ -32,6 +32,22 @@ RCT_EXPORT_METHOD(setUserId: (NSString *) userId) {
 
 RCT_EXPORT_METHOD(applicationStarted) {
     if(topmind != nil) [topmind applicationStarted];
+}
+
+RCT_REMAP_METHOD(getInstallId, getInstallIdWithResolver:(RCTPromiseResolveBlock)resolve getInstallIdWithRejecter:(RCTPromiseRejectBlock)reject) {
+	if(topmind != nil) {
+		resolve([topmind getInstallId]);
+	} else {
+		reject(@"error", @"TopMindSDK instance is null", nil);
+	}
+}
+
+RCT_REMAP_METHOD(isFirstRun, isFirstRunWithResolver:(RCTPromiseResolveBlock)resolve isFirstRunWithRejecter:(RCTPromiseRejectBlock)reject) {
+	if(topmind != nil) {
+		resolve(@([topmind isFirstRun]));
+	} else {
+		reject(@"error", @"TopMindSDK instance is null", nil);
+	}
 }
 
 @end
