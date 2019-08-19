@@ -1,6 +1,8 @@
 
 package com.talenttech.topmind;
 
+import android.content.Context;
+
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -17,9 +19,12 @@ import static com.talenttech.topmind.Utils.toMap;
 public class RNTopmindModule extends ReactContextBaseJavaModule {
 
     private TopMind topmind = null;
+    private Context context;
 
     RNTopmindModule(ReactApplicationContext reactContext) {
         super(reactContext);
+
+        this.context = reactContext.getApplicationContext();
     }
 
     @Override
@@ -30,9 +35,7 @@ public class RNTopmindModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void initialize() {
         try {
-            if (getCurrentActivity() != null) {
-                topmind = new TopMind(getCurrentActivity());
-            }
+            topmind = new TopMind(context);
         } catch (ApiKeyNotFoundException e) {
             e.printStackTrace();
         } catch (ClientIdNotFoundException e) {

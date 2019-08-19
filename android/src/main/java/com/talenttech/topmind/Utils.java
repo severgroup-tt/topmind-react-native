@@ -19,7 +19,7 @@ public class Utils {
 
         ReadableMapKeySetIterator iterator = readableMap.keySetIterator();
         if (!iterator.hasNextKey()) {
-            return null;
+            return new HashMap<>();
         }
 
         Map<String, Object> map = new HashMap<>();
