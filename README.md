@@ -87,6 +87,11 @@ import { RNTopmind } from 'react-native-topmind-sdk';
    * Returns the current install id
    */
   RNTopmind.getInstallId(): Promise<String>;
+  /**
+   * Returns the current sid_long
+   */
+  RNTopmind.getSidLong(): Promise<String>;
+
 
   /**
    * Returns true if the application was launched for the first time
