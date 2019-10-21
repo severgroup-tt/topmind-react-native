@@ -42,7 +42,7 @@ RCT_REMAP_METHOD(getInstallId, getInstallIdWithResolver:(RCTPromiseResolveBlock)
 	}
 }
 
-RCT_REMAP_METHOD(getSidLong, getInstallIdWithResolver:(RCTPromiseResolveBlock)resolve getInstallIdWithRejecter:(RCTPromiseRejectBlock)reject) {
+RCT_REMAP_METHOD(getSidLong, getSidLongWithResolver:(RCTPromiseResolveBlock)resolve getSidLongWithRejecter:(RCTPromiseRejectBlock)reject) {
 	if(topmind != nil) {
 		resolve([topmind getSidLong]);
 	} else {
