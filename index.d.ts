@@ -39,6 +39,11 @@ export class RNTopmind {
   static getInstallId(): Promise<String>;
 
   /**
+   * Returns the current sid_long
+   */
+  static getSidLong(): Promise<String>;
+
+  /**
    * Returns true if the application was launched for the first time
    */
   static isFirstRun(): Promise<String>;

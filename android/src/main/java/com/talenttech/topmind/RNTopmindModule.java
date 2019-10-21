@@ -81,6 +81,15 @@ public class RNTopmindModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+        public void getSidLong(Promise promise) {
+            if (topmind != null) {
+                runOnUiThread(() -> promise.resolve(topmind.getSidLong()));
+            } else {
+                promise.reject("error", "TopMind instance is null");
+            }
+        }
+
+    @ReactMethod
     public void isFirstRun(Promise promise) {
         if (topmind != null) {
             runOnUiThread(() -> promise.resolve(topmind.isFirstRun()));

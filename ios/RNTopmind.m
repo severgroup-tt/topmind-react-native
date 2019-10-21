@@ -42,6 +42,14 @@ RCT_REMAP_METHOD(getInstallId, getInstallIdWithResolver:(RCTPromiseResolveBlock)
 	}
 }
 
+RCT_REMAP_METHOD(getSidLong, getInstallIdWithResolver:(RCTPromiseResolveBlock)resolve getInstallIdWithRejecter:(RCTPromiseRejectBlock)reject) {
+	if(topmind != nil) {
+		resolve([topmind getSidLong]);
+	} else {
+		reject(@"error", @"TopMindSDK instance is null", nil);
+	}
+}
+
 RCT_REMAP_METHOD(isFirstRun, isFirstRunWithResolver:(RCTPromiseResolveBlock)resolve isFirstRunWithRejecter:(RCTPromiseRejectBlock)reject) {
 	if(topmind != nil) {
 		resolve(@([topmind isFirstRun]));
