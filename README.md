@@ -10,11 +10,21 @@ Run `yarn add react-native-topmind-sdk` or `npm install react-native-topmind-sdk
 Then run `react-native link react-native-topmind-sdk`
 
 ### Android setup
-Add maven repo in build.gradle
+Add your GitHub credentials(`GITHUB_USER` and `GITHUB_PERSONAL_ACCESS_TOKEN`([instruction](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)))
+into environment variables
+
+Then add maven repo in build.gradle
 ```groovy
 allprojects {
     repositories {
-        maven { url 'https://dl.bintray.com/talenttech/topmind' }
+        maven {
+            name = "GithubPackages"
+            url = uri("https://maven.pkg.github.com/severgroup-tt/topmind-sdk-android")
+            credentials {
+                username = System.getenv('GITHUB_USER')
+                password = System.getenv('GITHUB_PERSONAL_ACCESS_TOKEN')
+            }
+        }
     }
 }
 ```
